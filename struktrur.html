@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Struktur Organisasi</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Hubungkan file CSS eksternal -->
+  <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.d61773b7b80e72eeaf934c70c0b19d1c?rik=RCe%2bBJTou3mE5Q&riu=http%3a%2f%2ftik.pnl.ac.id%2fwp-content%2fuploads%2f2019%2f08%2fLOGO-HIMATIK.png&ehk=7UzUdI286%2bvPmoj7KAlLH4vH47bzOJk%2fbg9YROY8lE4%3d&risl=&pid=ImgRaw&r=0" sizes="32x32" />
+  <style>
+    /* Animasi */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    /* Warna */
+    :root {
+      --primary-color: #4C51BF; /* Biru tua */
+      --secondary-color: #f87171; /* Merah muda */
+      --tertiary-color: #34d399; /* Hijau muda */
+      --bg-hover-color: #dbe4ff; /* Warna latar hover */
+    }
+
+    body {
+      background-color: #f3f4f6; /* Abu-abu muda */
+    }
+
+    .primary-text {
+      color: var(--primary-color);
+    }
+
+    .secondary-text {
+      color: var(--secondary-color);
+    }
+
+    .tertiary-text {
+      color: var(--tertiary-color);
+    }
+
+    .hover-primary-text:hover {
+      color: var(--primary-color);
+    }
+
+    .hover-secondary-text:hover {
+      color: var(--secondary-color);
+    }
+
+    .hover-tertiary-text:hover {
+      color: var(--tertiary-color);
+    }
+
+    .bg-hover:hover {
+      background-color: var(--bg-hover-color);
+    }
+
+    /* Interaktivitas tambahan */
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="glass-bg navbar">
+    <div class="container mx-auto flex-center">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="https://th.bing.com/th/id/R.d61773b7b80e72eeaf934c70c0b19d1c?rik=RCe%2bBJTou3mE5Q&riu=http%3a%2f%2ftik.pnl.ac.id%2fwp-content%2fuploads%2f2019%2f08%2fLOGO-HIMATIK.png&ehk=7UzUdI286%2bvPmoj7KAlLH4vH47bzOJk%2fbg9YROY8lE4%3d&risl=&pid=ImgRaw&r=0" alt="Logo" class="h-12">
+      </div>
+
+      <!-- Menu Items (Desktop) -->
+      <div class="hidden md:flex menu">
+        <a href="index.html" class="hover:text-purple-300">Home</a>
+        <a href="struktrur.html" class="hover:text-purple-300">Departemen</a>
+        <a href="#" class="hover:text-purple-300">News</a>
+        <a href="#" class="hover:text-purple-300">About</a>
+        <a href="#" class="hover:text-purple-300">Contact Us</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="menu-mobile md:hidden">
+        <button id="mobile-menu-button" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar (Mobile) -->
+  <div class="sidebar glass-bg">
+    <button id="close-sidebar-button" class="text-white focus:outline-none absolute top-4 right-4">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <a href="index.html" class="hover:text-purple-300">Home</a>
+    <a href="struktrur.html" class="hover:text-purple-300">Departemen</a>
+    <a href="#" class="hover:text-purple-300">News</a>
+    <a href="#" class="hover:text-purple-300">About</a>
+    <a href="#" class="hover:text-purple-300">Contact Us</a>
+  </div>
+
+  <!-- Konten Struktur Organisasi -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center primary-text fade-in-up">Struktur Organisasi</h2>
+
+      <!-- Himpunan -->
+      <div class="flex items-center justify-center mb-8 fade-in">
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/200" alt="Ketua Himpunan" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">John Doe</h3>
+          <p class="text-gray-600 secondary-text">Ketua Himpunan</p>
+        </div>
+        <div class="text-center mx-8 hover-scale transition-all">
+          <img src="https://placekitten.com/200/201" alt="Wakil Ketua Himpunan" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jane Doe</h3>
+          <p class="text-gray-600 secondary-text">Wakil Ketua Himpunan</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/202" alt="Sekretaris Himpunan" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jack Doe</h3>
+          <p class="text-gray-600 secondary-text">Sekretaris Himpunan</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/203" alt="Bendahara Himpunan" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jill Doe</h3>
+          <p class="text-gray-600 secondary-text">Bendahara Himpunan</p>
+        </div>
+      </div>
+
+      <!-- Departemen 1 -->
+      <h2 class="text-2xl font-bold mb-4 text-center primary-text fade-in-up">Departemen 1</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-hover">
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/204" alt="Ketua Departemen 1" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jessica Doe</h3>
+          <p class="text-gray-600 secondary-text">Ketua Departemen 1</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/205" alt="Sekretaris Departemen 1" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">James Doe</h3>
+          <p class="text-gray-600 secondary-text">Sekretaris Departemen 1</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/206" alt="Anggota Departemen 1" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jennifer Doe</h3>
+          <p class="text-gray-600 secondary-text">Anggota Departemen 1</p>
+        </div>
+      </div>
+
+      <!-- Departemen 2 -->
+      <h2 class="text-2xl font-bold mb-4 text-center primary-text fade-in-up">Departemen 2</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-hover">
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/207" alt="Ketua Departemen 2" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">John Doe</h3>
+          <p class="text-gray-600 secondary-text">Ketua Departemen 2</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/208" alt="Sekretaris Departemen 2" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Frank Doe</h3>
+          <p class="text-gray-600 secondary-text">Sekretaris Departemen 2</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/209" alt="Anggota Departemen 2" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Grace Doe</h3>
+          <p class="text-gray-600 secondary-text">Anggota Departemen 2</p>
+        </div>
+      </div>
+
+      <!-- Departemen 3 -->
+      <h2 class="text-2xl font-bold mb-4 text-center primary-text fade-in-up">Departemen 3</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-hover">
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/210" alt="Ketua Departemen 3" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Henry Doe</h3>
+          <p class="text-gray-600 secondary-text">Ketua Departemen 3</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/211" alt="Sekretaris Departemen 3" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Ivy Doe</h3>
+          <p class="text-gray-600 secondary-text">Sekretaris Departemen 3</p>
+        </div>
+        <div class="text-center hover-scale transition-all">
+          <img src="https://placekitten.com/200/212" alt="Anggota Departemen 3" class="w-32 h-32 rounded-full object-cover mb-4 mx-auto">
+          <h3 class="text-lg font-bold primary-text">Jack Doe</h3>
+          <p class="text-gray-600 secondary-text">Anggota Departemen 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="text-center mt-16">
+    <div class="container mx-auto">
+      <p class="text-gray-400">© 2023 Your Organization. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    // Animasi Sidebar
+    $(document).ready(function() {
+      $("#mobile-menu-button").click(function() {
+        $(".sidebar").toggleClass("show-sidebar");
+      });
+
+      // Tutup Sidebar
+      $("#close-sidebar-button").click(function() {
+        $(".sidebar").removeClass("show-sidebar");
+      });
+    });
+  </script>
+</body>
+</html>
